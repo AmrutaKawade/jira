@@ -14,6 +14,9 @@ module.exports = {
       jiraHost: {
         type: Sequelize.STRING
       },
+      githubHost: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

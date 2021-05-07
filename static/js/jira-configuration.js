@@ -4,8 +4,8 @@ const appUrl = document.querySelector('meta[name=public-url]').getAttribute('con
 
 $('.add-organization-link').click(function (event) {
   event.preventDefault()
-
-  const child = window.open(`${appUrl}/github/redirect?jwt=${encodeURIComponent(params.get('jwt'))}&xdm_e=${encodeURIComponent(params.get('xdm_e'))}`)
+  const githubHost =  document.getElementById('githubHost').value;
+  const child = window.open(`${appUrl}/github/redirect?jwt=${encodeURIComponent(params.get('jwt'))}&xdm_e=${encodeURIComponent(params.get('xdm_e'))}&githubHost=${encodeURIComponent(githubHost)}`)
 
   const interval = setInterval(function () {
     if (child.closed) {

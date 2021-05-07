@@ -1,0 +1,16 @@
+[
+    {
+      "appId": ,
+      "baseUrl": "",
+      "clientId": "",
+      "clientSecret": "",
+      "privateKeyPath": "",
+      "webhookSecret": ""
+    },
+    {
+      "baseUrl": "",
+      "clientId": "",
+      "clientSecret": "",
+      "privateKeyPem": ""
+    }
+]
