@@ -4,7 +4,7 @@ $('#ghae_url_id').keyup(function (event) {
     let ghaeInstance = 'https://' + ghaeInstanceHost + '/settings/apps/new?state=abc123'
     
     //add github
-    document.cookie = "githubHost=" + ghaeInstanceHost;
+    document.cookie = "githubHost=" + ghaeInstanceHost
 
     document.getElementById("ghae_form_id").action = ghaeInstance
 })
