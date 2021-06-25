@@ -7,9 +7,4 @@ set -e
 PATH="$PATH:node_modules/.bin"
 
 # dev
-sequelize db:create || true
-sequelize db:migrate
-
-# test
-sequelize db:create --env test || true
-sequelize db:migrate --env test
+sequelize db:create --env development
