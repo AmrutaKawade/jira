@@ -1,13 +1,27 @@
 {
   "development": {
-    "database": "jira-dev",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "use_env_variable": "DATABASE_URL_DEV",
+    "disable_sql_logging": true,
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": true
+    },
+    "pool": {
+      "max": 15
+    }
   },
   "test": {
-    "database": "jira-test",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "dialect": "postgres",
+    "use_env_variable": "DATABASE_URL_TEST",
+    "disable_sql_logging": true,
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": true
+    },
+    "pool": {
+      "max": 15
+    }
   },
   "production": {
     "dialect": "postgres",
