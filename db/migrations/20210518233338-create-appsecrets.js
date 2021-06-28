@@ -1,21 +1,27 @@
 'use strict'
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Subscriptions', {
+    return queryInterface.createTable('AppSecrets', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      gitHubInstallationId: {
-        type: Sequelize.INTEGER
-      },
-      jiraHost: {
-        type: Sequelize.STRING
-      },
       githubHost: {
         type: Sequelize.STRING
+      },
+      clientId: {
+        type: Sequelize.STRING
+      },
+      clientSecret: {
+        type: Sequelize.STRING
+      },
+      privateKey: {
+        type: Sequelize.TEXT
+      },
+      appId: {
+        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -28,6 +34,6 @@ module.exports = {
     })
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Subscriptions')
+    return queryInterface.dropTable('AppSecrets')
   }
 }

@@ -95,6 +95,7 @@
                     </td>
                     <td>
                       <input type="hidden" id="_csrf" name="_csrf" value="{{../csrfToken}}">
+                       <input type="hidden" id="githubHost" name="githubHost" value="{{ ../githubHost }}">
                       <select id="{{id}}-sync-type">
                         <option value="normal">Normal</option>
                         <option value="full">Full</option>
@@ -129,6 +130,7 @@
             <div class="empty-message">
               <h4>You don't have any connected GitHub organizations. Let's fix that!</h4>
               <p>You'll be redirected to GitHub to select the organizations and repositories you'd like to connect with Jira.</p>
+              <p>Enter github host url</p><input type="text" id="githubHost" name="githubHost">
               <button class="ak-button ak-button__appearance-primary add-organization-link">Add an Organization</button>
             </div>
           {{/if}}
