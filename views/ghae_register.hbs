@@ -17,17 +17,16 @@
     <p class="text-gray text-center mb-4">All you have to do is provide us your instance URL, App manifest flow will create a jira app in your instance and link your instance with JIRA app </p>
     <p class="text-gray text-center mb-4">WHAT IS YOUR GHAE INSTANCE URL ?</p>
 
-<div class="input-group">
-    <input class="form-control input-lg" type="text" name="ghaeInstance" id="ghae_url_id" placeholder="GHAE instance url"
-        aria-label="GHAE Instance URL" value="" autofocus>
 </div>
     <form method="post" id="ghae_form_id">
       <div class="input-group">
-          <input type="hidden" name="manifest" id="manifest"  value="{{registration_data}}"  > 
+          <input type="hidden" name="manifest" id="manifest" >
+          <input class="form-control input-lg" type="text" name="ghaeInstance" id="ghae_url_id" placeholder="GHAE instance url"
+        aria-label="GHAE Instance URL" value="" autofocus>
         </span>
       </div>
       <p class="pt-2">
-        <button class="btn btn-primary" type="submit">REGISTER JIRA APP</button>
+        <button class="btn btn-primary ghae-register-link" type="submit" >REGISTER JIRA APP</button>
       </p>
       {{#if error}}
         <div class="flash flash-error mb-2">
@@ -36,7 +35,7 @@
       {{/if}}
     </form>
   </section>
-  <script src="/public/js/ghae-register.js"></script>
+  <script src="/public/js/ghae-register.js"></script> 
 </body>
 
 </html>
